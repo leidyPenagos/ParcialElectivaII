@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de StarWars</title>
+    <script defer src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #0a848a; }
+        select, button { margin: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Personajes de StarWars</h2>
+    
+    <label for="filtro por planeta">Planeta:</label>
+    <select id="filtro por planeta" onchange="filtrarTabla()">
+        <option value="">Todos</option>
+    </select>
+
+    <label for="filtro por especie">Especie:</label>
+    <select id="filtro por especie" onchange="filtrarTabla()">
+        <option value="">Todos</option>
+    </select>
+
+    <button onclick="cargarPersonajes()">Mostrar Tabla</button>
+
+    <table id="tabla" style="display: none;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Planeta</th>
+                <th>Especie</th>
+            </tr>
+        </thead>
+        <tbody id="tablabody">
+           
+        </tbody>
+    </table>
+
+</body>
+</html>
+
